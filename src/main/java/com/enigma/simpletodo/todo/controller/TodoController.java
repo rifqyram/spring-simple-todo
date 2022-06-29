@@ -18,7 +18,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/todos")
 @SecurityRequirement(name = "Authorization")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:4200"})
 @Tag(name = "Todo")
 public class TodoController {
 
