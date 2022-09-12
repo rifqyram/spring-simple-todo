@@ -44,7 +44,7 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.cors().and().httpBasic().and().csrf().disable()
+        http.httpBasic().and().csrf().disable()
                 .headers().frameOptions().disable().and()
                 .exceptionHandling().authenticationEntryPoint(authEntryPointJwt).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
